@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <style>
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9*/
+  position: relative;
+}
+
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+} </style>
 </head>
 <body>
- <iframe id="innerFrame" name="innerFrame" width="1080" height="720" src="https://mr-funkinguy.github.io/Music-Player-/" style="width:100%; overflow: auto;">\
+ <iframe class="iframe-container" id="innerFrame" name="innerFrame" width="1080" height="720" src="https://mr-funkinguy.github.io/Music-Player-/" style="width:100%; overflow: auto;">\
   </iframe>
-  <script>
-  function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-  }
-</script>
+
 </body>
 </html>
